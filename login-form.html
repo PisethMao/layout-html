@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework Login Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body{
+        display: flex;
+        height: 100vh;
+        margin: 0;
+      }
+      form {
+        border: 1px solid lightgray;
+        width: 25%;
+        margin: auto;
+        padding: 15px;
+        border-radius: 10px;
+        font-family: "Poppins", sans-serif;
+        box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+      }
+      h1 {
+        font-size: 30px;
+        font-weight: 600;
+        text-align: center;
+      }
+      .form-group {
+        display: flex;
+        justify-content: center;
+      }
+      .login-signup {
+        padding: 15px 20px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 600;
+        width: 200px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .background {
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        border: none;
+        color: white;
+        position: relative;
+        left: 6px;
+      }
+      .color {
+        background-color: white;
+        border: 1px solid lightgray;
+      }
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+      }
+      .email-password {
+        padding: 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        font-size: 16px;
+        margin: 10px;
+        width: 375px;
+        outline: none;
+        border-bottom: 2px solid lightgray;
+      }
+      .forgot-password {
+        text-decoration: none;
+        color: #d136cd;
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 40px;
+        position: relative;
+        left: -155px;
+        margin-top: -5px;
+      }
+      .login {
+        text-align: center;
+      }
+      .button-login {
+        width: 395px;
+        font-size: 16px;
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+        border: none;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: 600;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+      .signup-now {
+        text-align: center;
+        margin: 30px;
+        margin-top: 40px;
+      }
+      p{
+        font-weight: 400;
+        font-size: 14px;
+      }
+      .signup-now a {
+        text-decoration: none;
+        color: #d136cd;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#">
+      <div>
+        <h1>Login Form</h1>
+      </div>
+      <div class="form-group">
+        <button class="login-signup background" style="width: 206px">
+          Login
+        </button>
+        <button
+          class="login-signup color"
+          style="width: 200px; margin-right: 6px"
+        >
+          Signup
+        </button>
+      </div>
+      <div class="input-group">
+        <input
+          class="email-password"
+          type="email"
+          placeholder="Email address"
+        />
+        <input class="email-password" type="text" placeholder="Password" />
+        <a href="#" class="forgot-password">Forgot password?</a>
+      </div>
+      <div class="login">
+        <button class="button-login">Login</button>
+      </div>
+      <div class="signup-now">
+        <p>Not a member? <a href="#">Signup now</a></p>
+      </div>
+    </form>
+  </body>
+</html>
