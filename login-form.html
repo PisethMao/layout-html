@@ -11,48 +11,78 @@
       rel="stylesheet"
     />
     <style>
-      body{
+      body {
         display: flex;
         height: 100vh;
+        justify-content: center;
+        align-items: center;
         margin: 0;
+        background-color: lightgray;
       }
       form {
         border: 1px solid lightgray;
-        width: 25%;
-        margin: auto;
+        max-width: 450px;
         padding: 15px;
         border-radius: 10px;
         font-family: "Poppins", sans-serif;
         box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.3);
+        background-color: white;
+        text-align: center;
+        padding-left: 50px;
+        padding-right: 50px;
       }
       h1 {
         font-size: 30px;
         font-weight: 600;
-        text-align: center;
       }
       .form-group {
         display: flex;
         justify-content: center;
       }
       .login-signup {
+        flex: 1;
         padding: 15px 20px;
-        text-align: center;
         font-size: 16px;
         font-weight: 600;
-        width: 200px;
         border-radius: 5px;
         cursor: pointer;
+        text-align: center;
+        transition: 0.3s ease-in-out;
+        background-color: lightgray;
+        color: black;
+        display: inline-block;
+        width: 50%;
+        border: none;
+      }
+      #login-tab:checked + label {
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+      }
+      #signup-tab:checked + label {
+        background: linear-gradient(45deg, #d136cd, #ee4e63);
+        color: white;
+      }
+      #login-tab:not(:checked) + label,
+      #signup-tab:not(:checked) + label {
+        background-color: lightgray;
+        color: black;
       }
       .background {
-        background: linear-gradient(45deg, #d136cd, #ee4e63);
-        border: none;
         color: white;
-        position: relative;
-        left: 6px;
+      }
+      .background:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.5s;
       }
       .color {
-        background-color: white;
-        border: 1px solid lightgray;
+        background-color: lightgray;
+        color: black;
+      }
+      .color:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.5s;
       }
       .input-group {
         display: flex;
@@ -62,26 +92,28 @@
       }
       .email-password {
         padding: 10px;
-        border: 1px solid lightgray;
         border-radius: 5px;
         font-size: 16px;
-        margin: 10px;
+        margin: 10px 0;
         width: 375px;
         outline: none;
-        border-bottom: 2px solid lightgray;
+        border: none;
+        border: 2px solid lightgray;
+        background-color: lightgray;
+        transition: 0.3s ease-in-out;
+      }
+      .email-password:focus {
+        border: 2px solid #d136cd;
+        background-color: white;
+        outline: none;
       }
       .forgot-password {
         text-decoration: none;
         color: #d136cd;
         font-size: 14px;
         font-weight: 400;
-        padding-left: 40px;
-        position: relative;
-        left: -155px;
-        margin-top: -5px;
-      }
-      .login {
-        text-align: center;
+        align-self: flex-start;
+        margin-left: 2%;
       }
       .button-login {
         width: 395px;
@@ -95,12 +127,17 @@
         margin-top: 30px;
         cursor: pointer;
       }
+      .button-login:hover {
+        background: linear-gradient(45deg, #ee4e63, #d136cd);
+        border-radius: 0;
+        transition: 0.5s;
+      }
       .signup-now {
         text-align: center;
         margin: 30px;
         margin-top: 40px;
       }
-      p{
+      p {
         font-weight: 400;
         font-size: 14px;
       }
@@ -118,15 +155,15 @@
         <h1>Login Form</h1>
       </div>
       <div class="form-group">
-        <button class="login-signup background" style="width: 206px">
-          Login
-        </button>
-        <button
-          class="login-signup color"
-          style="width: 200px; margin-right: 6px"
+        <input type="radio" id="login-tab" name="tab" checked hidden />
+        <label
+          for="login-tab"
+          class="login-signup background"
+          style="width: 206px"
+          >Login</label
         >
-          Signup
-        </button>
+        <input type="radio" id="signup-tab" name="tab" hidden />
+        <label for="signup-tab" class="login-signup color">Signup</label>
       </div>
       <div class="input-group">
         <input
